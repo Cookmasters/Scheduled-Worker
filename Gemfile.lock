@@ -1,0 +1,36 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    aws-partitions (1.52.0)
+    aws-sdk-core (3.13.0)
+      aws-partitions (~> 1.0)
+      aws-sigv4 (~> 1.0)
+      jmespath (~> 1.0)
+    aws-sdk-sqs (1.3.0)
+      aws-sdk-core (~> 3)
+      aws-sigv4 (~> 1.0)
+    aws-sigv4 (1.0.2)
+    declarative (0.0.10)
+    declarative-option (0.1.0)
+    econfig (2.0.0)
+    jmespath (1.3.1)
+    multi_json (1.12.2)
+    representable (3.0.4)
+      declarative (< 0.1.0)
+      declarative-option (< 0.2.0)
+      uber (< 0.2.0)
+    roar (1.1.0)
+      representable (~> 3.0.0)
+    uber (0.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  aws-sdk-sqs (~> 1)
+  econfig
+  multi_json
+  roar
+
+BUNDLED WITH
+   1.16.0
