@@ -1,0 +1,24 @@
+---
+AllCops:
+  TargetRubyVersion: 2.4
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - spec/**/*
+    - Rakefile
+
+Security/YAMLLoad:
+  Enabled: true
+  Exclude:
+    - spec/**/*
+
+Style/HashSyntax:
+  Enabled: true
+  Exclude:
+    - Rakefile
+
+Style/SymbolArray:
+  Enabled: true
+  Exclude:
+    - Rakefile
