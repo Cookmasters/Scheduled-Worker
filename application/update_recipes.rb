@@ -14,7 +14,6 @@ Econfig.root = File.expand_path('..', File.dirname(__FILE__))
 # Get a list of All pages
 pages_json = RecipeBuddy::ApiGateway.all_pages.message
 pages = RecipeBuddy::PagesRepresenter.new(OpenStruct.new).from_json pages_json
-pages = pages
 
 pages.pages.each do |index|
   if index.request_id.nil?
