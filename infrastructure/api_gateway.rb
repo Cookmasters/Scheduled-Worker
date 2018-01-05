@@ -39,21 +39,21 @@ module RecipeBuddy
       end
     end
 
-    def initialize(config = RecipeBuddy::App.config)
+    def initialize(config)
       @config = config
     end
 
-    def self.all_pages
+    def all_pages
       call_api(:get, %w[page all])
     end
 
-    def self.update_page(pagename)
+    def update_page(pagename)
       call_api(:put, ['page', pagename])
     end
 
-    def self.call_api(method, resources)
-      url_route = ['http://localhost:3000', 'api/v0.1', resources].flatten
-                                                                  .join('/')
+    def call_api(method, resources)
+      url_route = [@config.API_HOST, @config.API_VER, resources].flatten
+                                                                .join('/')
 
       result = HTTP.send(method, url_route)
       raise(result.parse['message']) if result.code >= 300
