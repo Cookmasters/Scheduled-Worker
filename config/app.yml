@@ -1,0 +1,13 @@
+---
+development:
+  API_HOST: http://localhost:3030
+  API_VER: api/v0.1
+  APP_URL: http://localhost:9090
+test:
+  API_HOST: http://localhost:3000
+  API_VER: api/v0.1
+  APP_URL: http://localhost:9000
+production:
+  API_HOST: https://cookmasters-api.herokuapp.com
+  API_VER: api/v0.1
+  APP_URL: https://cookmasters-app.herokuapp.com

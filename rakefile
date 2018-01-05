@@ -6,9 +6,9 @@ task :console do
 end
 
 USERNAME = 'cookmasters'
-IMAGE = 'RecipeBuddy-update_recipes'
+IMAGE = 'recipebuddy-update_recipes'
 VERSION = '0.1.0'
-WORKER_APP = 'ruby application/update_recipe.rb'
+WORKER_APP = 'ruby application/update_recipes.rb'
 
 desc 'Build Docker image'
 task :worker do
@@ -20,7 +20,7 @@ namespace :docker do
   desc 'Build Docker image'
   task :build do
     puts "\nBUILDING WORKER IMAGE"
-    sh "docker build --force-rm -t #{USERNAME}/#{IMAGE}:#{VERSION} ."
+    sh "docker build --rm --force-rm -t #{USERNAME}/#{IMAGE}:#{VERSION} ."
   end
 
   desc 'Run the local Docker container as a worker'

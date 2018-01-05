@@ -8,6 +8,10 @@ extend Econfig::Shortcut
 Econfig.env = ENV['WORKER_ENV'] || 'development'
 Econfig.root = File.expand_path('..', File.dirname(__FILE__))
 
+ENV['API_HOST']= config.API_HOST
+ENV['API_VER'] = config.API_VER
+ENV['APP_URL'] = config.APP_URL
+
 # module RecipeBuddy
 #   # Class to update recipes on the database
 #   class UpdateRecipes
