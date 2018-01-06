@@ -1,4 +1,4 @@
-FROM soumyaray/ruby-http:2.4.3_20180104
+FROM soumyaray/ruby-http:2.4.3
 
 WORKDIR /worker
 
@@ -17,7 +17,7 @@ CMD rake worker
 # Run and test local container with:
 #   rake docker:run
 # or:
-#   docker run -e --rm -it -v $(pwd)/config:/worker/config -w /worker cookmasters/recipebuddy-update_recipes:0.1.0 ruby worker/clone_notifier.rb
+#   docker run -e --rm -it -v $(pwd)/config:/worker/config -w /worker cookmasters/recipebuddy-update_recipes:0.1.0 ruby worker/update_recipes.rb
 
 # REMOTE:
 # Make sure Heroku app exists:
